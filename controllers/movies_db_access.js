@@ -81,7 +81,7 @@ exports.add = function(req, res, next) {
     const genres = req.body.genres;
 
     if (!id || !title || !genres) {
-    	return res.status(422).send({ error: 'You must provide movie id, title, and genres' });
+        return res.status(422).send({ error: 'You must provide movie id, title, and genres' });
     }
 
     const movie = new Movie({
@@ -91,7 +91,7 @@ exports.add = function(req, res, next) {
     });
     movie.save(function(err) {//save the move into the database
         if (err) {
-        	return next(err);
+            return next(err);
         }
         res.send({ success: true });
     });
@@ -114,7 +114,7 @@ function parseMovie(movie) {
 //movies first.
 function determineMoviesList(moviesList) {
     const moviesArr = moviesList.map(movie => {
-    return parseMovie(movie);
+        return parseMovie(movie);
     });
     //sort movies from newest to oldest
     moviesArr.sort((movie1, movie2) => {
@@ -161,7 +161,7 @@ function determineMoviesList(moviesList) {
 function determineGenresList(moviesList) {
     //sort movies in alphabetical order
     moviesList.sort((movieA, movieB) => {
-    	const genresA = movieA.genres.toUpperCase(); // ignore upper and lowercase
+        const genresA = movieA.genres.toUpperCase(); // ignore upper and lowercase
         const genresB = movieB.genres.toUpperCase(); // ignore upper and lowercase
         if (genresA < genresB) {
             return -1;
