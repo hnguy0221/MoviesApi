@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>GettingStarted</title>
+    <link rel="stylesheet" media="screen" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" />
+    <meta name="csrf-param" content="authenticity_token" />
+    <meta name="csrf-token" content="4wlfpNjA28ZrEBuw7PP+rm7DS3wRbtigY3YaIW2Hdcj7jdFxGeyH/nz3wtCK1YmTyWILuyhp6TC2woOE9PuGXA==" />
+  </head>
+  <body>
+    <div class="container">
+      <h3>Movies API Reference</h3>
+      <table class="table table-hover">
+        <thead>
+          <tr>
+            <th>Endpoint</th>
+            <th>Method</th>
+            <th>Example</th>
+            <th>Sample Response</th>
+            <th>Description</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>/api/movies/find/:id</td>
+            <td>GET</td>
+            <td>localhost:3090/api/movies/find/150</td>
+            <td>
+              <pre>
+{
+  "_id": "5a8f54ffef7b2465b352d810",
+  "movie_id": 150,
+  "title": "Apollo 13 (1995)",
+  "genres": [
+    "Adventure",
+    "Drama",
+    "IMAX"
+  ],
+  "year": 1995
+}
+              </pre>
+            </td>
+            <td>
+              Gets a single movie with the given ID.
+            </td>
+          </tr>
+          <tr>
+            <td>/api/movies/all</td>
+            <td>GET</td>
+            <td>localhost:3090/api/movies/all</td>
+            <td>
+              <pre>
+[
+  {
+      "_id": "5a8f54ffef7b2465b352d7a4",
+      "movie_id": 22,
+      "title": "Copycat (1995)",
+      "genres": [
+          "Crime",
+          "Drama",
+          "Horror",
+          "Mystery",
+          "Thriller"
+      ],
+      "year": 1995
+  },
+  {
+      "_id": "5a8f54ffef7b2465b352d7ac",
+      "movie_id": 30,
+      "title": "Shanghai Triad (Yao a yao yao dao waipo qiao) (1995)",
+      "genres": [
+          "Crime",
+          "Drama"
+      ],
+      "year": 1995
+  },
+  {
+      "_id": "5a8f54ffef7b2465b352d7ae",
+      "movie_id": 36,
+      "title": "Dead Man Walking (1995)",
+      "genres": [
+          "Crime",
+          "Drama"
+      ],
+      "year": 1995
+  },
+  {
+      "_id": "5a8f54ffef7b2465b352d7af",
+      "movie_id": 32,
+      "title": "Twelve Monkeys (a.k.a. 12 Monkeys) (1995)",
+      "genres": [
+          "Mystery",
+          "Sci-Fi",
+          "Thriller"
+      ],
+      "year": 1995
+  }
+]
+              </pre>
+            </td>
+            <td>Fetch the 100 most recent movies from the database.</td>
+          </tr>
+          <tr>
+            <td>api/movies/genre/:genre</td>
+            <td>GET</td>
+            <td>localhost:3090/api/movies/genre/comedy</td>
+            <td>
+              <pre>
+[
+  {
+      "_id": "5a8f54ffef7b2465b352d80d",
+      "movie_id": 141,
+      "title": "Birdcage, The (1996)",
+      "genres": [
+          "Comedy"
+      ],
+      "year": 1996
+  },
+  {
+      "_id": "5a8f54ffef7b2465b352d808",
+      "movie_id": 144,
+      "title": "Brothers McMullen, The (1995)",
+      "genres": [
+          "Comedy"
+      ],
+      "year": 1995
+  },
+  {
+      "_id": "5a8f54ffef7b2465b352d807",
+      "movie_id": 135,
+      "title": "Down Periscope (1996)",
+      "genres": [
+          "Comedy"
+      ],
+      "year": 1996
+  },
+  {
+      "_id": "5a8f54ffef7b2465b352d7f2",
+      "movie_id": 104,
+      "title": "Happy Gilmore (1996)",
+      "genres": [
+          "Comedy"
+      ],
+      "year": 1996
+  },
+  {
+      "_id": "5a8f54ffef7b2465b352d7fd",
+      "movie_id": 125,
+      "title": "Flirting With Disaster (1996)",
+      "genres": [
+          "Comedy"
+      ],
+      "year": 1996
+  }
+]
+              </pre>
+            </td>
+            <td>Fetch the 100 most recent movies from the database with the given genre.</td>
+          </tr>
+          <tr>
+            <td>/api/movies/update/:id</td>
+            <td>POST</td>
+            <td>localhost:3090/api/movies/update/151</td>
+            <td>
+              <pre>
+{
+  "n": 1,
+  "nModified": 1,
+  "ok": 1
+}
+              </pre>
+            </td>
+            <td>Update a movie in the database with the given ID.</td>
+          </tr>
+          <tr>
+            <td>/api/movies/delete/:id</td>
+            <td>DELETE</td>
+            <td>localhost:3090/api/movies/delete/151</td>
+            <td>
+              <pre>
+{
+  "success": true
+}
+              </pre>
+            </td>
+            <td>Delete a movie from the database with the given ID.</td>
+          </tr>
+          <tr>
+            <td>/api/movies/add</td>
+            <td>POST</td>
+            <td>localhost:3090/api/movies/add</td>
+            <td>
+              <pre>
+{
+  "success": true
+}
+              </pre>
+            </td>
+            <td>Add a new movie into the database.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </body>
+</html>
