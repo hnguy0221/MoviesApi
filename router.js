@@ -7,7 +7,7 @@ module.exports = function(app) {
     });
     app.get('/api/movies/find/:id', MoviesDbAccess.findById);
     app.get('/api/movies/all', MoviesDbAccess.findAll);
-    app.get('/api/movies/genre/:genre', MoviesDbAccess.findByGenre)
+    app.get('/api/movies/genre/:genre', MoviesDbAccess.findByGenre);
     app.post('/api/movies/update/:id', MoviesDbAccess.update);
     app.delete('/api/movies/delete/:id', MoviesDbAccess.delete);
     app.post('/api/movies/add', MoviesDbAccess.add);
