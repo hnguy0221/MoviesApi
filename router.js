@@ -1,7 +1,7 @@
 const MoviesDbAccess = require('./controllers/movies_db_access');
 
 module.exports = function(app) {
-	//simple index route
+    //simple index route
     app.get('/', function(req, res) {
         res.send(index.html);
     });

@@ -3,13 +3,13 @@ const Schema = mongoose.Schema;//Schema is used to tell mongoose about a particu
 
 //Define our model
 const movieSchema = new Schema({
-	"movie id": {
-		type: Number,
-		unique: true,
-		required: true
-	},
+    "movie id": {
+        type: Number,
+        unique: true,
+        required: true
+    },
     title: {
-    	type: String,
+        type: String,
         required: true
     },
     genres: {
