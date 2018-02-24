@@ -111,8 +111,8 @@ function parseMovie(movie) {
 
 //This helper function determines which year has the most movies 
 //and it returns an array that has the year with the most 
-//movies first. The year that has the second most movies will be
-//second, etc ...
+//movies. The year with the most movies will be first, the year 
+//with the second most movies will be second, etc ...
 function determineMoviesList(moviesList) {
     const moviesArr = moviesList.map(movie => {
         return parseMovie(movie);
@@ -144,8 +144,8 @@ function determineMoviesList(moviesList) {
         return obj2.movies - obj1.movies;
     });
     //Finally, using the array that has the year with the most movies,
-    //build a list of movies with the most movies first. The year with
-    //the second most movies will be second, etc ...
+    //build a list of movies. The year with the most movies will be 
+    //first, the year with second most movies will be second, etc ...
     const moviesResults = [];
     for (let element of yearsArr) {
         for (let movie of moviesArr) {
@@ -159,8 +159,8 @@ function determineMoviesList(moviesList) {
 
 //This helper function determines which genres has the most movies 
 //and it returns an array that has the genres with the most 
-//movies first. The genres with the second most movies will be second,
-//etc ...
+//movies. The genres with the most movies will be first, the genres 
+//with the second most movies will be second, etc ...
 function determineGenresList(moviesList) {
     //sort movies in alphabetical order
     moviesList.sort((movieA, movieB) => {
@@ -199,8 +199,9 @@ function determineGenresList(moviesList) {
         return objB.movies - objA.movies;
     });
     //Finally, using the array that has the genres with the most movies,
-    //build a list of movies with the most movies first. The genres with
-    //the second most movies will be second, etc ...
+    //build a list of movies. The genres with the most movies will be 
+    //first, the genres with the second most movies will be second, 
+    //etc ...
     const moviesResults = [];
     for (let element of genresArr) {
         for (let movie of moviesList) {
