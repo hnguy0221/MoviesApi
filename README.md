@@ -1,5 +1,5 @@
 # MoviesApi
-This is the movies server API. The documentation on how to test different endpoints will appear if you type in localhost:3090 in the URL of the browser.
+This is the movies API server. The documentation on how to test different endpoints will appear if you type in localhost:3090 in the URL of the browser.
 
 ### Technologies used
 * HTML, JavaScript, Express, Morgan, Body-Parser, Router, MongoDB, Mongoose (ORM to MongoDB), and Node Js.
