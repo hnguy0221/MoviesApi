@@ -8,7 +8,7 @@ This is the movies API server. The documentation on how to test different endpoi
 * git clone https://github.com/hnguy0221/MoviesApi.git
 * cd MoviesApi
 * npm install
-* Assuming you have MongoDB installed
+* The following steps assume you have MongoDB and Postman installed
 * On a separate terminal, type in, mongod, and hit enter
 * On a separate terminal, type in, npm run dev, and hit enter
 * On a separate terminal, type in the following command to import the movies from the CSV file into MongoDB. Note: The location of my Movies.csv is /Users/mackbook/WebProjects/MoviesApi/. On your machine, the location of the CSV file is probably different.
